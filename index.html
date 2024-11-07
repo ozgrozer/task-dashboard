@@ -3,107 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Task Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
   <meta http-equiv="cache-control" content="no-cache" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Task Dashboard" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <style>
-    html {
-      font-size: 1vmax;
-    }
-    body {
-      margin: 0;
-      font-family: 'Times New Roman';
-    }
-    html, body {
-      height: 100%;
-    }
-    * {
-      box-sizing: border-box;
-    }
-
-    .dt {
-      width: 100%;
-      height: 100%;
-      display: table;
-    }
-    .dt >.dtc {
-      width: 100%;
-      height: 100%;
-      padding: 0 2rem;
-      text-align: center;
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    #top, #bottom {
-      width: 100%;
-      height: 50%;
-      float: left;
-    }
-
-    .full {
-      width: 100%;
-      float: left;
-      height: 100%;
-    }
-    .half {
-      width: 50%;
-      float: left;
-      height: 100%;
-    }
-
-    #currentTime, #currentDate {
-      font-weight: bold;
-    }
-    #currentTime #amPm {
-      font-size: 3rem;
-      line-height: 3rem;
-      margin-left: 1rem;
-      text-transform: uppercase;
-    }
-    #currentTime {
-      background-color: #fff;
-    }
-    #currentDate {
-      background-color: #ecf0f1;
-    }
-
-    #currentTask, #nextTask {
-      font-weight: bold;
-      position: relative;
-    }
-    #currentTask {
-      background-color: #2ecc71;
-    }
-    #nextTask {
-      background-color: #bdc3c7;
-    }
-    #currentTaskRemain, #nextTaskTime {
-      top: 0;
-      right: 0;
-      color: #fff;
-      font-size: 2rem;
-      line-height: 2rem;
-      padding: 1rem 2rem;
-      position: absolute;
-      background-color: #555;
-    }
-
-    @media (max-width: 767px) {
-      #currentTime, #currentDate, #currentTask, #nextTask {
-        font-size: 4rem;
-        line-height: 4rem;
-      }
-    }
-    @media (min-width: 768px) {
-      #currentTime, #currentDate, #currentTask, #nextTask {
-        font-size: 7rem;
-        line-height: 7rem;
-      }
-    }
-  </style>
 </head>
 <body id="templater">
   <div id="top">
