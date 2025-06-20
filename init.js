@@ -104,13 +104,13 @@ var t12ToT24 = function (hour, amPm) {
 }
 
 var calculateMinutes = function (hours, minutes) {
-  return (hours * 60) + minutes
+  return hours * 60 + minutes
 }
 
 var time = () => {
   var today = fakeTime ? new Date(fakeTime) : new Date()
   var getDate = today.getDate()
-  var getMonth = (today.getMonth() + 1)
+  var getMonth = today.getMonth() + 1
   var getFullYear = today.getFullYear()
   var getHours = today.getHours()
   var getMinutes = today.getMinutes()
@@ -130,7 +130,8 @@ var time = () => {
   var hours = getHours
   var minutes = getMinutes.length === 1 ? '0' + getMinutes : getMinutes
   var seconds = getSeconds.length === 1 ? '0' + getSeconds : getSeconds
-  var time = hours + ':' + minutes + ':' + seconds + '<b id="amPm">' + cAmPm + '</b>'
+  var time =
+    hours + ':' + minutes + ':' + seconds + '<b id="amPm">' + cAmPm + '</b>'
   var date = getMonth + '/' + getDate + '/' + getFullYear
   return {
     time: time,
@@ -140,9 +141,10 @@ var time = () => {
 
 var run = function () {
   var today = fakeTime ? new Date(fakeTime) : new Date()
-  var getHours = parseInt(today.getHours()) === 0 ? 24 : parseInt(today.getHours())
+  var getHours =
+    parseInt(today.getHours()) === 0 ? 24 : parseInt(today.getHours())
   var getMinutes = parseInt(today.getMinutes())
-  var getNowM = (getHours * 60) + getMinutes
+  var getNowM = getHours * 60 + getMinutes
 
   var currentTask
   var nextTask
@@ -158,7 +160,10 @@ var run = function () {
     var taskBeginningMinute = taskBeginningSplitTime.minute
     var taskBeginningAmPm = taskBeginningSplitTime.amPm
     taskBeginningHour = t12ToT24(taskBeginningHour, taskBeginningAmPm).hour
-    var taskBeginningM = calculateMinutes(taskBeginningHour, taskBeginningMinute)
+    var taskBeginningM = calculateMinutes(
+      taskBeginningHour,
+      taskBeginningMinute
+    )
 
     var taskFinishSplitTime = splitTime(taskFinishTime)
     var taskFinishHour = taskFinishSplitTime.hour
@@ -166,14 +171,17 @@ var run = function () {
     var taskFinishAmPm = taskFinishSplitTime.amPm
     taskFinishHour = t12ToT24(taskFinishHour, taskFinishAmPm).hour
     var taskFinishM = calculateMinutes(taskFinishHour, taskFinishMinute)
-    var ifConditionValue = taskBeginningAmPm === 'pm' ? taskFinishM : taskBeginningM
+    var ifConditionValue =
+      taskBeginningAmPm === 'pm' ? taskFinishM : taskBeginningM
 
     if (
       (getNowM >= taskBeginningM && getNowM < taskFinishM) ||
-      (taskBeginningM >= ifConditionValue && taskBeginningM > taskFinishM && !currentTask)
+      (taskBeginningM >= ifConditionValue &&
+        taskBeginningM > taskFinishM &&
+        !currentTask)
     ) {
       currentTask = taskName
-      var nextTaskArrayIndex = i === (tasks.length - 1) ? 0 : i + 1
+      var nextTaskArrayIndex = i === tasks.length - 1 ? 0 : i + 1
       nextTask = tasks[nextTaskArrayIndex][0]
       nextTaskTime = tasks[nextTaskArrayIndex][1]
     }
@@ -181,20 +189,27 @@ var run = function () {
 
   if (currentTask) {
     var splitNextTaskTime = splitTime(nextTaskTime)
-    var splitNextTaskTimeC = t12ToT24(splitNextTaskTime.hour, splitNextTaskTime.amPm)
+    var splitNextTaskTimeC = t12ToT24(
+      splitNextTaskTime.hour,
+      splitNextTaskTime.amPm
+    )
 
     var getTimeM = calculateMinutes(getHours, getMinutes)
-    var splitNextTaskTimeM = calculateMinutes(splitNextTaskTimeC.hour, splitNextTaskTime.minute)
+    var splitNextTaskTimeM = calculateMinutes(
+      splitNextTaskTimeC.hour,
+      splitNextTaskTime.minute
+    )
 
     var calculateRemainMinutes
     if (splitNextTaskTimeM > getTimeM) {
       calculateRemainMinutes = splitNextTaskTimeM - getTimeM
     } else {
-      calculateRemainMinutes = (1440 - getTimeM) + splitNextTaskTimeM
+      calculateRemainMinutes = 1440 - getTimeM + splitNextTaskTimeM
     }
     var remainHours = Math.floor(calculateRemainMinutes / 60)
-    var remainMinutes = (calculateRemainMinutes - (remainHours * 60)).toString()
-    remainMinutes = remainMinutes.length === 1 ? '0' + remainMinutes : remainMinutes
+    var remainMinutes = (calculateRemainMinutes - remainHours * 60).toString()
+    remainMinutes =
+      remainMinutes.length === 1 ? '0' + remainMinutes : remainMinutes
     var currentTaskRemain = remainHours + ':' + remainMinutes
 
     templater('templater', {
@@ -209,4 +224,4 @@ var run = function () {
 }
 
 run()
-setInterval(run, (fakeTime ? 100000 : 1000))
+setInterval(run, fakeTime ? 100000 : 1000)
