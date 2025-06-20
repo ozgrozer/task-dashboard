@@ -8,10 +8,10 @@ var weekdayTasks = [
   ['drive', '12:20 pm', '12:40 pm'],
   ['lunch', '12:40 pm', '12:50 pm'],
   ['shower', '12:50 pm', '1:00 pm'],
-  ['work', '1:00 pm', '3:00 pm'],
-  ['dinner', '3:00 pm', '3:30 pm'],
-  ['walk', '3:30 pm', '4:00 pm'],
-  ['work', '4:00 pm', '12:00 am'],
+  ['work', '1:00 pm', '3:30 pm'],
+  ['dinner', '3:30 pm', '4:00 pm'],
+  ['walk', '4:00 pm', '4:30 pm'],
+  ['work', '4:30 pm', '12:00 am'],
   ['fun', '12:00 am', '2:00 am']
 ]
 var weekendTasks = [
@@ -24,10 +24,10 @@ var weekendTasks = [
   ['drive', '12:20 pm', '12:40 pm'],
   ['lunch', '12:40 pm', '12:50 pm'],
   ['shower', '12:50 pm', '1:00 pm'],
-  ['work', '1:00 pm', '3:00 pm'],
-  ['dinner', '3:00 pm', '3:30 pm'],
-  ['walk', '3:30 pm', '4:00 pm'],
-  ['work', '4:00 pm', '12:00 am'],
+  ['work', '1:00 pm', '3:30 pm'],
+  ['dinner', '3:30 pm', '4:00 pm'],
+  ['walk', '4:00 pm', '4:30 pm'],
+  ['work', '4:30 pm', '12:00 am'],
   ['fun', '12:00 am', '2:00 am']
 ]
 
