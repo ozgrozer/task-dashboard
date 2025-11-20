@@ -1,32 +1,32 @@
 var weekdayTasks = [
-  'wake up', '10:00 am', '10:10 am',
-  'breakfast', '10:10 am', '10:40 am',
-  'gym prep', '10:40 am', '11:00 am',
-  'drive', '11:00 am', '11:20 am',
-  'gym', '11:20 am', '12:20 pm',
-  'groceries', '12:20 pm', '12:40 pm',
-  'drive', '12:40 pm', '1:00 pm',
-  'lunch', '1:00 pm', '1:20 pm',
-  'shower', '1:20 pm', '1:30 pm',
-  'work', '1:30 pm', '4:00 pm',
-  'dinner', '4:00 pm', '4:30 pm',
-  'work', '4:30 pm', '12:00 am',
-  'fun', '12:00 am', '2:00 am'
+  ['wake up', '10:00 am', '10:10 am'],
+  ['breakfast', '10:10 am', '10:40 am'],
+  ['gym prep', '10:40 am', '11:00 am'],
+  ['drive', '11:00 am', '11:20 am'],
+  ['gym', '11:20 am', '12:20 pm'],
+  ['groceries', '12:20 pm', '12:40 pm'],
+  ['drive', '12:40 pm', '1:00 pm'],
+  ['lunch', '1:00 pm', '1:20 pm'],
+  ['shower', '1:20 pm', '1:30 pm'],
+  ['work', '1:30 pm', '4:00 pm'],
+  ['dinner', '4:00 pm', '4:30 pm'],
+  ['work', '4:30 pm', '12:00 am'],
+  ['fun', '12:00 am', '2:00 am']
 ]
 var weekendTasks = [
-  'wake up', '10:00 am', '10:10 am',
-  'breakfast', '10:10 am', '10:40 am',
-  'gym prep', '10:40 am', '11:00 am',
-  'drive', '11:00 am', '11:20 am',
-  'gym', '11:20 am', '12:20 pm',
-  'groceries', '12:20 pm', '12:40 pm',
-  'drive', '12:40 pm', '1:00 pm',
-  'lunch', '1:00 pm', '1:20 pm',
-  'shower', '1:20 pm', '1:30 pm',
-  'work', '1:30 pm', '4:00 pm',
-  'dinner', '4:00 pm', '4:30 pm',
-  'work', '4:30 pm', '12:00 am',
-  'fun', '12:00 am', '2:00 am'
+  ['wake up', '10:00 am', '10:10 am'],
+  ['breakfast', '10:10 am', '10:40 am'],
+  ['gym prep', '10:40 am', '11:00 am'],
+  ['drive', '11:00 am', '11:20 am'],
+  ['gym', '11:20 am', '12:20 pm'],
+  ['groceries', '12:20 pm', '12:40 pm'],
+  ['drive', '12:40 pm', '1:00 pm'],
+  ['lunch', '1:00 pm', '1:20 pm'],
+  ['shower', '1:20 pm', '1:30 pm'],
+  ['work', '1:30 pm', '4:00 pm'],
+  ['dinner', '4:00 pm', '4:30 pm'],
+  ['work', '4:30 pm', '12:00 am'],
+  ['fun', '12:00 am', '2:00 am']
 ]
 
 var tasks
